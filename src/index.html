@@ -5,20 +5,149 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/css/style.css" rel="stylesheet">
-
+    <link href="./css/style.css" rel="stylesheet">
     <title>Document</title>
 </head>
 
 <body>
-    <div>
-        <h1 id="id">ALGO</h1>
-        <h1 id="nome">ALGO</h1>
-        <h1 id="telefone">ALGO</h1>
-        
-    </div>
+    <ul class="cards">
+        <li>
 
-    <script src="./js/scripts.js"></script>
+            <a class="card" id="prato1">
+                <img src="./img/img1.avif" class="card__image" alt="" />
+                <div class="card__overlay">
+                    <div class="card__header">
+                        <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                            <path />
+                        </svg>
+
+                        <div class="card__header-text">
+                            <h3 class="card__title">Strogonoff de frango</h3>
+                            <span class="card__status">Arroz, strogonoff, batata palha..</span>
+                        </div>
+
+                        <div class="plus" name="prato1">
+                            <img src="./img/plus.png">
+                        </div>
+                    </div>
+                    <div class="card__description">
+                        <label>Nome</label>
+                        <input type="text" placeholder="Seu nome">
+                        <label>Telefone</label>
+                        <input type="text" placeholder="Telefone">
+                        <div class="quantidade">
+                            <button class="comerAqui" name="nao"><img src="./img/comeraqui.png" style="width: 30px;">
+                                <p>Comer no local</p>
+                            </button>
+
+
+                            <button class="comerAqui" name="sim"><img src="./img/paralevar.png" style="width: 30px;">
+                                <p>Para levar</p>
+                            </button>
+                        </div>
+
+
+                        <div class="enviar">
+                            <button id="pratoUm"><img src="./img/prato.png"> ENVIAR PEDIDO</button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li>
+
+            <a class="card" id="prato2">
+                <img src="./img/img1.avif" class="card__image" alt="" />
+                <div class="card__overlay">
+                    <div class="card__header">
+                        <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                            <path />
+                        </svg>
+
+                        <div class="card__header-text">
+                            <h3 class="card__title">Strogonoff de frango</h3>
+                            <span class="card__status">Arroz, strogonoff, batata palha..</span>
+                        </div>
+
+                        <div class="plus" name="prato2">
+                            <img src="./img/plus.png">
+                        </div>
+                    </div>
+                    <div class="card__description">
+                        <label>Nome</label>
+                        <input type="text" placeholder="Seu nome">
+                        <label>Telefone</label>
+                        <input type="text" placeholder="Telefone">
+                        <div class="quantidade">
+                            <button class="comerAqui" name="nao"><img src="./img/comeraqui.png" style="width: 30px;">
+                                <p>Comer no local</p>
+                            </button>
+
+
+                            <button class="comerAqui" name="sim"><img src="./img/paralevar.png" style="width: 30px;">
+                                <p>Para levar</p>
+                            </button>
+                        </div>
+
+
+                        <div class="enviar">
+                            <button id="pratoDois"><img src="./img/prato.png"> ENVIAR PEDIDO</button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+
+        <li>
+
+            <a class="card" id="prato3">
+                <img src="./img/img1.avif" class="card__image" alt="" />
+                <div class="card__overlay">
+                    <div class="card__header">
+                        <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                            <path />
+                        </svg>
+
+                        <div class="card__header-text">
+                            <h3 class="card__title">Strogonoff de frango</h3>
+                            <span class="card__status">Arroz, strogonoff, batata palha..</span>
+                        </div>
+
+                        <div class="plus" name="prato3">
+                            <img src="./img/plus.png">
+                        </div>
+                    </div>
+                    <div class="card__description">
+                        <label>Nome</label>
+                        <input type="text" placeholder="Seu nome">
+                        <label>Telefone</label>
+                        <input type="text" placeholder="Telefone">
+                        <div class="quantidade">
+                            <button class="comerAqui" name="nao"><img src="./img/comeraqui.png" style="width: 30px;">
+                                <p>Comer no local</p>
+                            </button>
+
+
+                            <button class="comerAqui" name="sim"><img src="./img/paralevar.png" style="width: 30px;">
+                                <p>Para levar</p>
+                            </button>
+                        </div>
+
+
+                        <div class="enviar">
+                            <button id="pratoTres"><img src="./img/prato.png"> ENVIAR PEDIDO</button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+
+    </ul>
+
+    <a href="pedidos.html">PEDIDOS</a>
+
+
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
