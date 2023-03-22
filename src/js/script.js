@@ -46,17 +46,7 @@ botaoP3.addEventListener('click', () => {
 
 })
 
-//PARA VIAGEM?//
-const levar = document.querySelectorAll('.comerAqui')
 
-levar.forEach(e => {
-    e.addEventListener('click', () => {
-        viagem = e.getAttribute('name')
-
-        e.style.backgroundColor = 'red'
-    })
-})
-//
 
 function pegaDados(input) {
     const prato1 = document.querySelector(input);

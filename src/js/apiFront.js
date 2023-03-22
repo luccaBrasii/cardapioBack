@@ -1,8 +1,10 @@
 const pessoas = []
 
 
-
-
+/*setInterval(() => {
+    atualizarPagina()
+}, 15000)
+*/
 fetch('http://localhost:3000/api', {
     method: 'GET'
 })
@@ -59,6 +61,7 @@ function pegaID() {
             const idPedido = elemento.closest('.pedido-only').querySelector('.idPedido').textContent;
 
             deletaPedido(idPedido)
+            atualizarPagina()
         });
     });
 }
@@ -78,4 +81,8 @@ function deletaPedido(id) {
             }
         })
         .catch(error => console.error('Erro ao fazer a requisição DELETE:', error));
+}
+
+function atualizarPagina() {
+    location.reload();
 }

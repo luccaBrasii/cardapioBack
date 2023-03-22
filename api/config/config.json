@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "@RootLocal",
-    "database": "api",
+    "database": "pedidos",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },

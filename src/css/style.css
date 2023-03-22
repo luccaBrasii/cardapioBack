@@ -100,6 +100,10 @@ li {
 }
 */
 
+.selecionado {
+    border-color: crimson;
+}
+
 .active {
     transform: translateY(0);
 }
@@ -198,7 +202,6 @@ li {
     margin: 10px 10px;
     align-items: center;
     cursor: pointer;
-    border: 1px solid black;
 }
 
 .comerAqui p {
