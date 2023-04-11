@@ -10,6 +10,7 @@ module.exports = {
       nomePrato: 'carne de panela',
       viagem: 'sim',
       hrRetirada: '22:30',
+      status: 'andamento',
       createdAt: new Date(),
       updatedAt: new Date()
     }], {});

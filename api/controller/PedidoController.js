@@ -22,6 +22,19 @@ class PedidoControler {
         }
     }
 
+    static async attPedido(req, res) {
+        const { id } = req.params
+        const att = req.body
+        try {
+            await database.pedidos.update(att,{
+                where: { id: Number(id) }
+            })
+            return res.status(200).json({ mensagem: `id ${id} atualizado` })
+        } catch (erro) {
+            res.status(500).json(erro)
+        }
+    }
+
     static async deletaPedido(req, res) {
         const { id } = req.params
         try {

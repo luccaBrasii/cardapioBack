@@ -17,42 +17,30 @@ fetch('http://localhost:3000/api', {
 
 
         pessoas.map(e => {
-            if (e.status != 'concluido' && e.status == 'andamento') {
-                criaPedido(e, imgPrato(e.nomePrato))
+            if (e.status == 'concluido' && e.status != 'andamento' && e.status != 'entregue') {
+                criaPedido(e)
             }
         })
     })
 
-
-
-
-
-
-function criaPedido(val, prato) {
+function criaPedido(val) {
     const container = document.querySelector('.pedidos')
 
 
     container.innerHTML += `
-    <div class="pedido-only">
-            <div>
-                <img class="prato" src=`+ prato + `>
+        <div class="pedido-only">
+            <div class="verificado">
+                <img class="ok" src="./img/verificado.png">
+
             </div>
             <div class="info-pedido">
                 <h1>Pedido <span class='idPedido'>`+ val.id + `</span> | ` + val.nomePrato + `</h1>
-                <h3>Nome</h3>
-                <p>`+ val.nome + `</p>
-                <h3>Telefone</h3>
-                <p>`+ val.telefone + `</p>
-                <h3>Para viagem</h3>
-                <p>`+ val.viagem + `</p>
+                <h2>`+ val.nome + `</h2>
             </div>
-            <div class="verificado">
-                <img class="ok" src="./img/ampulheta.png">
-                <h3 style="margin-right: 10px;">Pedido em andamento</h3>
-            </div>
+
         </div>
-    
-    `
+        
+        `
 
     pegaID()
 
@@ -65,7 +53,7 @@ function pegaID() {
             const idPedido = elemento.closest('.pedido-only').querySelector('.idPedido').textContent;
 
             attPedido(idPedido)
-            //atualizarPagina()
+            location.reload();
         });
     });
 }
@@ -77,7 +65,7 @@ function attPedido(id) {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            status: 'concluido'
+            status: 'entregue'
         }),
     })
         .then(response => {
@@ -88,19 +76,4 @@ function attPedido(id) {
             }
         })
         .catch(error => console.error('Erro ao fazer a requisição DELETE:', error));
-}
-
-function atualizarPagina() {
-    location.reload();
-}
-
-
-function imgPrato(val) {
-    if (val == 'Strogonoff de frango') {
-        return './img/img1.avif'
-    } else if (val == 'Escondidinho de carne') {
-        return './img/escondidinho.jpg'
-    } else if (val == 'Galinhada') {
-        return './img/galinhada.jpg'
-    }
 }

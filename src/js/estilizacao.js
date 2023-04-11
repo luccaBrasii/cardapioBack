@@ -1,6 +1,5 @@
-
+//BORDA LEVAR/COMER AQUI
 const levar = document.querySelectorAll('.comerAqui')
-
 levar.forEach(e => {
 
     e.addEventListener('click', () => {
@@ -20,3 +19,19 @@ function removeEfeito() {
         e.classList.remove('selecionado')
     })
 }
+//
+
+const botoes = document.querySelectorAll('.mandarPedido')
+
+
+botoes.forEach(e => {
+    e.addEventListener('click', () => {
+        document.querySelector('.viaCliente').style.display = 'block'
+    })
+})
+
+
+
+document.querySelector('#fechaViaCliente').addEventListener('click', () => {
+    document.querySelector('.viaCliente').style.display = 'none'
+})

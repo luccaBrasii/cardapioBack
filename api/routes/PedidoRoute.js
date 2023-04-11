@@ -4,6 +4,7 @@ const router = Router()
 
 router.get('/api', PedidoControler.pegaTudo)
 router.post('/api', PedidoControler.criaPedido)
+router.put('/api/:id', PedidoControler.attPedido)
 router.delete('/api/registros/:id', PedidoControler.deletaPedido)
 
 

@@ -18,7 +18,8 @@ module.exports = (sequelize, DataTypes) => {
     nome: DataTypes.STRING,
     telefone: DataTypes.STRING,
     viagem: DataTypes.STRING,
-    hrRetirada: DataTypes.STRING
+    hrRetirada: DataTypes.STRING,
+    status: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'pedidos',

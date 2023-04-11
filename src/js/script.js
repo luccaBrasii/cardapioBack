@@ -74,6 +74,7 @@ function postar(prato, nome, telefone, viagem) {
             "telefone": telefone,
             "nomePrato": prato,
             "viagem": viagem,
+            "status": "andamento",
             "hrRetirada": "22:30"
 
         })

@@ -21,3 +21,7 @@ app.get('/', function (req, res) {
 app.get('/pedidos.html', function (req, res) {
     res.sendFile(__dirname + '/pedidos.html');
 });
+
+app.get('/pedidosProntos.html', function (req, res) {
+    res.sendFile(__dirname + '/pedidosProntos.html');
+});
